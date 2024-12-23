@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>FEBO</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" href="static/style.css" />
   <script>
     // Show or hide a given popup by ID
     function showPopup(popupId) {
@@ -27,19 +27,19 @@
     <div class="xp-desktop-icons">
       <!-- My Documents Icon -->
       <div class="xp-icon" onclick="showPopup('popupMyDocs')">
-        <img src="{{ url_for('static', filename='Vodik2.png') }}" alt="Hydrogen Icon" />
+        <img src="static/Vodik2.png.png" alt="Hydrogen Icon" />
         <div class="xp-icon-label">Vodik</div>
       </div>
 
       <!-- My Computer Icon -->
       <div class="xp-icon" onclick="showPopup('popupMyComp')">
-        <img src="{{ url_for('static', filename='Lol.png') }}" alt="Lol Icon" />
+        <img src="static/LoL.png" alt="Lol Icon" />
         <div class="xp-icon-label">LoL na papiru</div>
       </div>
 
       <!-- Internet Explorer Icon -->
       <div class="xp-icon" onclick="showPopup('popupIE')">
-        <img src="{{ url_for('static', filename='Cd.png') }}" alt="Pes6 Icon" />
+        <img src="static/PES6.png" alt="Pes6 Icon" />
         <div class="xp-icon-label">PES6</div>
       </div>
     </div>
@@ -126,6 +126,7 @@
         <button onclick="hidePopup('popupIE')">Zatvori</button>
       </div>
     </div>
+  </div>
   </div>
 </body>
 </html>
