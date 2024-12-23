@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FEBO</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script>
+    // Show or hide a given popup by ID
+    function showPopup(popupId) {
+      document.getElementById(popupId).style.display = "block";
+    }
+    function hidePopup(popupId) {
+      document.getElementById(popupId).style.display = "none";
+    }
+  </script>
+</head>
+<body>
+  <!-- Windows XP Bliss Background -->
+  <div class="xp-background">
+    <!-- Simulated "Taskbar" at the bottom -->
+    <div class="xp-taskbar">
+      <div class="xp-start-button">Start</div>
+      <div class="xp-taskbar-clock">Vrijeme je za lol!</div>
+    </div>
+
+    <!-- "Desktop Icons" -->
+    <div class="xp-desktop-icons">
+      <!-- My Documents Icon -->
+      <div class="xp-icon" onclick="showPopup('popupMyDocs')">
+        <img src="{{ url_for('static', filename='Vodik2.png') }}" alt="Hydrogen Icon" />
+        <div class="xp-icon-label">Vodik</div>
+      </div>
+
+      <!-- My Computer Icon -->
+      <div class="xp-icon" onclick="showPopup('popupMyComp')">
+        <img src="{{ url_for('static', filename='Lol.png') }}" alt="Lol Icon" />
+        <div class="xp-icon-label">LoL na papiru</div>
+      </div>
+
+      <!-- Internet Explorer Icon -->
+      <div class="xp-icon" onclick="showPopup('popupIE')">
+        <img src="{{ url_for('static', filename='Cd.png') }}" alt="Pes6 Icon" />
+        <div class="xp-icon-label">PES6</div>
+      </div>
+    </div>
+
+    <!-- Example center content (optional) -->
+<!--    <div class="xp-center-content">-->
+<!--      <h1>Welcome to FEBO</h1>-->
+<!--      <p>Feel free to open icons to explore content!</p>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <!-- POPUP #1: My Documents -->
+  <div id="popupMyDocs" class="popup-overlay">
+    <div class="popup-window">
+      <!-- Title Bar -->
+      <div class="popup-title-bar">
+        <div class="popup-title">Vodik</div>
+        <div class="popup-close-button" onclick="hidePopup('popupMyDocs')">×</div>
+      </div>
+      <!-- Popup Content -->
+      <div class="popup-content">
+        <h2>Vodik</h2>
+        <p>
+          Febo je na putu da postane najveći jebač u području vodika.
+        </p>
+        <h3>Znanstevni uspjesi na području vodika:</h3>
+        <p>
+          - Usporedba vodika, amonijaka i metanola za primjene u brodskom prometu
+          - TBD
+        </p>
+      </div>
+      <!-- Popup Buttons -->
+      <div class="popup-buttons">
+        <button onclick="hidePopup('popupMyDocs')">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP #2: My Computer -->
+  <div id="popupMyComp" class="popup-overlay">
+    <div class="popup-window">
+      <!-- Title Bar -->
+      <div class="popup-title-bar">
+        <div class="popup-title">LoL na papiru</div>
+        <div class="popup-close-button" onclick="hidePopup('popupMyComp')">×</div>
+      </div>
+      <!-- Popup Content -->
+      <div class="popup-content">
+        <h2>LoL na papiru</h2>
+        <p>Febo je začetnik lola na papiru koji je kasnije tvrtka na R preuzela i napravila TFT o kojem je Febo sada ovisan.</p>
+      </div>
+      <!-- Popup Buttons -->
+      <div class="popup-buttons">
+        <button onclick="hidePopup('popupMyComp')">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP #3: Internet Explorer -->
+  <div id="popupIE" class="popup-overlay">
+    <div class="popup-window">
+      <!-- Title Bar -->
+      <div class="popup-title-bar">
+        <div class="popup-title">PES6</div>
+        <div class="popup-close-button" onclick="hidePopup('popupIE')">×</div>
+      </div>
+      <!-- Popup Content -->
+      <div class="popup-content">
+        <h1>Nedostaje CD čitač!</h1>
+<!--        <h2>Welcome to Internet Explorer</h2>-->
+<!--        <p>-->
+<!--          This is a mock Internet Explorer window. Back in the XP days, IE was the most common browser.-->
+<!--          It might look something like this, though with far fewer features than modern browsers.-->
+<!--        </p>-->
+<!--        <h3>Browsing the Web in XP</h3>-->
+<!--        <p>-->
+<!--          - Watch out for pop-ups and ActiveX Controls.<br/>-->
+<!--          - Always keep your antivirus up to date!<br/>-->
+<!--          - Old websites might still work, but modern ones may not render well.-->
+<!--        </p>-->
+      </div>
+      <!-- Popup Buttons -->
+      <div class="popup-buttons">
+        <button onclick="hidePopup('popupIE')">Zatvori</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

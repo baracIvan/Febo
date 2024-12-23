@@ -1,0 +1,182 @@
+/* Body reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Tahoma", "Verdana", sans-serif;
+}
+
+/* The classic Windows XP "Bliss" background image */
+.xp-background {
+  background: url('background.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Fill the viewport height */
+  overflow: hidden;
+}
+
+/* A simulated XP taskbar at the bottom of the page */
+.xp-taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background-color: #004e98; /* Windows XP taskbar color */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* "Start" button */
+.xp-start-button {
+  background: linear-gradient(to bottom, #5ff82b, #2e5d02);
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+  padding: 5px 15px;
+  border: 1px solid #005b9e;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.xp-start-button:hover {
+  background: linear-gradient(to bottom, #00c5ff, #0090d8);
+}
+
+/* Simple clock on the right side of the taskbar */
+.xp-taskbar-clock {
+  color: #fff;
+  margin-right: 15px;
+}
+
+/* Center content if you want something above the background */
+.xp-center-content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  text-shadow: 1px 1px 2px #fff;
+  text-align: center;
+}
+
+/* "Desktop icons" container */
+.xp-desktop-icons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each icon on the desktop */
+.xp-icon {
+  width: 100px; /* typical icon size or a bit bigger if you like */
+  text-align: center;
+  cursor: pointer;
+}
+
+.xp-icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.xp-icon-label {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #000;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+/* Popup overlay covering entire screen */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* a semi-transparent black overlay */
+  display: none; /* Hidden by default */
+  z-index: 9999;
+}
+
+/* XP-like window container */
+.popup-window {
+  background-color: #ece9d8; /* Classic XP window color */
+  border: 2px solid #6A8BB3; /* XP window border color */
+  border-radius: 3px;
+  width: 600px; /* Larger popup */
+  max-width: 90%;
+  margin: 5% auto;
+  position: relative;
+  box-shadow: 0 0 10px #000;
+  font-size: 14px;
+}
+
+/* Title bar with XP default color (blue-ish) */
+.popup-title-bar {
+  background: linear-gradient(to bottom, #003c78, #0062c5);
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0 10px;
+  cursor: default;
+  user-select: none;
+}
+
+/* Title text on the left */
+.popup-title {
+  flex: 1;
+  font-weight: bold;
+}
+
+/* "Close" style button on the right (X) */
+.popup-close-button {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #c40319;
+  border: 1px solid #000;
+  border-radius: 2px;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.popup-close-button:hover {
+  background-color: #003c78;
+}
+
+/* Popup content area */
+.popup-content {
+  padding: 20px;
+  min-height: 80px;
+}
+
+/* Buttons at the bottom of the popup window */
+.popup-buttons {
+  text-align: right;
+  background-color: #d4d0c8; /* XP gray-ish color for button area */
+  padding: 10px 20px;
+  border-top: 1px solid #999;
+}
+
+/* XP-style button */
+.popup-buttons button {
+  background-color: #d4d0c8;
+  border: 1px solid #999;
+  padding: 5px 15px;
+  margin-left: 5px;
+  font-family: Tahoma, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.popup-buttons button:hover {
+  background-color: #bbb;
+}
